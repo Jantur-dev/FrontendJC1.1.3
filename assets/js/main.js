@@ -19,6 +19,8 @@ if(navClose){
     })
 }
 
+// OnCLick Dropdown
+
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -32,7 +34,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () =>{
     const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+
     this.scrollY >= 50 ? header.classList.add('scroll-header') 
                        : header.classList.remove('scroll-header')
 }
@@ -103,7 +105,7 @@ const cart = document.getElementById('cart'),
       cartClose = document.getElementById('cart-close')
 
 /*===== CART SHOW =====*/
-/* Validate if constant exists */
+/* Button show */
 if(cartShop){
     cartShop.addEventListener('click', () =>{
         cart.classList.add('show-cart')
@@ -111,7 +113,7 @@ if(cartShop){
 }
 
 /*===== CART HIDDEN =====*/
-/* Validate if constant exists */
+/* buttonc close */
 if(cartClose){
     cartClose.addEventListener('click', () =>{
         cart.classList.remove('show-cart')
@@ -123,27 +125,42 @@ const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'bx-sun'
 
-// Previously selected topic (if user selected)
+// (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
-// We obtain the current theme that the interface has by validating the dark-theme class
+// obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
 
-// We validate if the user previously chose a topic
+// Pilihan tema user
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  // nAVIGASI BUTTON
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
 }
 
-// Activate / deactivate the theme manually with the button
+// Action button dark or lighttt
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
+    // Add or remove dark modee
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
+    // set apa yang sedang terjadi
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// CLEAR CHECKBOX
+
+function clearCheck() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox]"');
+    // checkboxes.checked = false;
+    for (var index = 0; index < checkboxes.length; index++) {
+        // const element = array[index];
+        if (checkboxes[index].checked) {
+            checkboxes[index].checked = false;
+            
+        }
+        
+    }
+}

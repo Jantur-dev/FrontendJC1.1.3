@@ -37,7 +37,7 @@
                         <a href="../index.html" class="nav__link ">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link active-link">Design Own &dtrif;</a>
+                        <a href="../design/" class="nav__link ">Design Own &dtrif;</a>
                         <ul class="dropdown ">
                             <li><a href="#">T-Shirt</a></li>
                             <li><a href="#">Long Sleeves</a></li>
@@ -48,7 +48,7 @@
                             <li><a href="#">Varsity</a></li>
                         </ul>
                     <li class="nav__item">
-                        <a href="index.html     " class="nav__link">Our Product</a>
+                        <a href="index.html     " class="nav__link active-link">Our Product</a>
                     </li>
                     <li class="nav__item">
                         <a href="#new" class="nav__link">Contact</a>
@@ -147,12 +147,13 @@
     </div>
 
     <!-- Main / hero -->
-    <main class="main">
+    <div class="main">
+
         <div class="home__container container grid">
             <div class="Main">
                 <div class="product__page__title">
                     <h1 class="page__title">Product</h1>
-
+                    
                     <div class="container__sidebar">
                         <!-- search -->
                         <div class="container__search">
@@ -161,15 +162,15 @@
                                 
                             </div>
                         </div>
-                    <!-- checkbox -->
-
-                    <div class="sidebar__checkbox">
-                        <div class="category__title">
-                            <h1 class="text__category" >Category</h1>
-                            <label class="checkbox" for="check1">
-                                <input type="checkbox" id="check1" value="1">
-                                <div>
-                                    <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                        <!-- checkbox -->
+                        
+                        <div class="sidebar__checkbox">
+                            <div class="category__title">
+                                <h1 class="text__category" >Category</h1>
+                                <label class="checkbox" for="check1">
+                                    <input type="checkbox" id="check1" value="1">
+                                    <div>
+                                        <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
                                         <title>checkmark-circle</title>
                                         <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
                                     </svg>
@@ -239,10 +240,12 @@
                             <!-- <button onclick="clearCheck()" class="button__clear">Clear All</button> -->
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
+        </div>
+    </div>
         <div class="container__card__product">
+            <section class="products section container" id="products">
                         <div class="products__container grid">
                 <article class="products__card">
                     <img src="../assets/img/product/satoru.png" alt="" class="products__img">
@@ -298,17 +301,19 @@
                         <i class='bx bx-shopping-bag'></i>
                     </button>
                 </article>
+                </section>
             </div>
+        </div>
+        </div>
             <!-- <button class="button__card__product"><h1 class="btn__text__card">Design My Own</h1></button>
             </div> -->
-
-    </main>
-
+            
+            
     <footer class="footer section">
         <div class="footer__container container grid">
             <div class="footer__content">
                 <h3 class="footer__title">Our information</h3>
-
+                
                 <ul class="footer__list">
                     <li>Email : jantur29@gmail.com</li>
                     <li>Purwokerto, Banyumas, Jawa Tengah</li>
@@ -317,7 +322,7 @@
             </div>
             <div class="footer__content">
                 <h3 class="footer__title">About Us</h3>
-
+                
                 <ul class="footer__links">
                     <li>
                         <a href="#" class="footer__link">Support Center</a>
@@ -333,10 +338,10 @@
                     </li>
                 </ul>
             </div>
-
+            
             <div class="footer__content">
                 <h3 class="footer__title">Our Supplier</h3>
-
+                
                 <ul class="footer__links">
                     <li>
                         <a href="#" class="footer__link">BBA Salon</a>
@@ -352,29 +357,29 @@
                     </li>
                 </ul>
             </div>
-
+            
             <div class="footer__content">
                 <h3 class="footer__title">Social Media Kami</h3>
-
+                
                 <ul class="footer__social">
                     <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
                         <i class='bx bxl-facebook'></i>
                     </a>
-
+                    
                     <a href="https://twitter.com/" target="_blank" class="footer__social-link">
                         <i class='bx bxl-twitter'></i>
                     </a>
-
+                    
                     <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
                         <i class='bx bxl-instagram'></i>
                     </a>
                 </ul>
             </div>
         </div>
-
+        
         <span class="footer__copy">&#169; Jantur Dev || JCLothes</span>
     </footer>
-
+    
 
 
     <!-- end main -->

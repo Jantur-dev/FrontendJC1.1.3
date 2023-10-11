@@ -179,6 +179,8 @@ body.dark-theme {
   align-items: flex-start;
   gap: 1.99438rem;
   align-self: stretch;
+  width: 1200px;
+  /* margin-right: 9rem; */
 }
 .Main {
   display: flex;
@@ -331,7 +333,7 @@ ul li {
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 650px) {
   .nav__menu {
     position: fixed;
     background-color: var(--body-color);
@@ -399,7 +401,7 @@ ul li {
   align-self: stretch;
 }
 .text__category {
-  font-family: Righteous; 
+  font-family: Righteous;
   font-weight: 700;
   padding-right: 1rem;
   margin-bottom: 1rem;
@@ -505,14 +507,17 @@ svg {
 }
 /*=============== card ===============*/
 .container__card__product {
-  width: 40rem;
+  width: 41.5rem;
   height: 45rem;
   /* top: 0; */
 }
-.products__container {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
+
+ .products__container {
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 2rem;
+  } 
+
 
 .products__card {
   position: relative;
@@ -749,7 +754,7 @@ rect {
   margin: 3.5rem 0 1rem 0;
   text-align: center;
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--nav-hover-color);
 }
 
 /*=============== SCROLL UP ===============*/
@@ -906,39 +911,45 @@ rect {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 390px) {
   .container {
     margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+    margin-right:1px;
   }
-
-  .home__img-bg {
-    width: 220px;
+  .section {
+    padding: 5.5rem 0 1rem;
   }
-
-  .home__title {
-    font-size: var(--h1-font-size);
+  .main {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.99438rem;
+  align-self: stretch;
+  width: 390px;
+  height: 740px;
+  margin-top: 3rem;
+  /* margin-right: 9rem; */
+}
+.container__card__product {
+  width: 5rem;
+  height: 25rem;
+  /* top: 0; */
+}
+.container__sidebar {
+  display: flex;
+  width: 8rem;
+  height: 35rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+  .products__img {
+    height: 100px;
   }
-
-  .home__button {
-    font-size: var(--smaller-font-size);
-  }
-
-  .story__square,
-  .story__img,
-  .testimonial__square,
-  .testimonial__img {
-    width: 180px;
-  }
-
-  .story__square,
-  .testimonial__square {
-    height: 180px;
-  }
-
   .products__container {
-    grid-template-columns: repeat(1, 180px);
+    grid-template-columns: repeat(1, 150px);
     justify-content: center;
+    gap: 1rem;
   }
 }
 
@@ -957,15 +968,12 @@ rect {
     position: absolute;
   }
 
-  .container__design {
-    width: 382px;
-    height: 488px;
-    left: 3.5px;
-    top: 0px;
-    position: absolute;
-    background: var(--body-color);
-    border: 4px var(--nav-hover-color) solid;
+  .products__container {
+    grid-template-columns: repeat(2, 100px);
+    justify-content: center;
+    gap: 2rem;
   }
+
 
   .featured__container {
     grid-template-columns: repeat(2, 1fr);
@@ -979,7 +987,7 @@ rect {
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 500px){
   .section {
     padding: 8rem 0 1rem;
   }
@@ -1059,11 +1067,16 @@ rect {
   .story__images {
     order: -1;
   }
+  .container__card__product {
+  width: 30.5rem;
+  height: 45rem;
+  top: 0;
+}
 
   .products__container {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(2, 200px);
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .products__card {
@@ -1074,19 +1087,6 @@ rect {
     height: 155px;
   }
 
-  .newsletter__bg {
-    text-align: initial;
-    column-gap: 2rem;
-    padding: 4.5rem;
-  }
-
-  .newsletter__subscribe {
-    flex-direction: row;
-  }
-
-  .newsletter__input {
-    width: 100%;
-  }
 
   .footer__container {
     grid-template-columns: repeat(4, max-content);
@@ -1104,7 +1104,7 @@ rect {
   }
 
   .home__container {
-    column-gap: 2rem;
+    column-gap: 0rem;
   }
 
   .home__img-bg {
@@ -1145,11 +1145,17 @@ rect {
   .testimonial__square {
     height: 450px;
   }
+  .container__card__product {
+  width: 41.5rem;
+  height: 45rem;
+  /* top: 0; */
+}
 
-  .products__container,
-  .new__container {
-    padding-top: 2rem;
-  }
+ .products__container {
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 2rem;
+  } 
 
   .testimonial__container {
     padding-bottom: 4rem;

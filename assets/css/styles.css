@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   --first-color: hsl(199, 66%, 46%);
-  --button-color: hsl(0, 0%, 31%);
+  --button-color: hsl(0, 0%, 100%);
   --button-color-alt: hsl(0, 0%, 21%);
   --nav-hover-color: #3ca0e7;
   --title-color: hsl(0, 0%, 15%);
@@ -720,7 +720,7 @@ svg {
   margin-top: 15px;
   margin-left: 20px;
   display: flex;
-  flex-direction: column;
+   flex-direction: column;
 }
 
 .testimonial_comment_head .rating {
@@ -734,6 +734,7 @@ svg {
 
 .testimonial_comment_head img {
   width: 100px;
+  border-radius: 50%;
 }
 
 .testimonial_comment_head i {
@@ -748,14 +749,14 @@ svg {
 .testimonial_comment_container .comment textarea {
   position: relative;
   top: 70px;
-  left: 100px;
+  left: 50px;
   background: transparent;
-  border-radius: 15px;
   border: 1px solid black;
   font-size: 17px;
   padding-left: 10px;
   padding-top: 10px;
-  height: 100px;
+  height: 200px;
+  width: 350px;
 }
 .testimonial_comment_container .comment textarea::placeholder {
   color: black;
@@ -769,17 +770,18 @@ svg {
   position: relative;
   top: 110px;
   left: 20px;
-  background-color: rgb(125, 255, 125);
+  background-color: var(--body-color);
   padding: 10px;
-  border-radius: 5px;
+  color: var(--text-color);
+  width: 68.6875px;
 }
 .testimonial_comment_container .comment .cancel {
   position: relative;
   top: 110px;
-  right: 250px;
-  background-color: rgb(253, 67, 67);
+  right: 355px;
+  background-color: rgb(221, 46, 46);
   padding: 10px;
-  border-radius: 5px;
+  color: var(--text-color);
 }
 
 .testimonial_comment_container .button-container {

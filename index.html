@@ -17,6 +17,14 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+        html {
+            font-family: 'Roboto', 'sans-serif';
+        }
+    </style>
+
     <title>JCLothes || Make Your Ideas Into Reality</title>
 </head>
 
@@ -35,7 +43,7 @@
                     <li class="nav__item">
                         <a href="design/index.html" class="nav__link">Design Own &dtrif;</a>
                         <ul class="dropdown ">
-                            <li><a href="#">T-Shirt</a></li>
+                            <li><a href="design/index.html">T-Shirt</a></li>
                             <li><a href="#">Long Sleeves</a></li>
                             <li><a href="#">Hoodie</a></li>
                             <li><a href="#">Sweater</a></li>
@@ -43,19 +51,19 @@
                             <li><a href="#">Jacket</a></li>
                             <li><a href="#">Varsity</a></li>
                         </ul>
-                            <li class="nav__item">
-                                <a href="product/index.html" class="nav__link">Our Product</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#new" class="nav__link">Contact</a>
-                            </li>
-                        </ul>
+                    <li class="nav__item">
+                        <a href="product/index.html" class="nav__link">Our Product</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">Contact</a>
+                    </li>
+                </ul>
 
-                        <!-- close tab navbar responsive -->
+                <!-- close tab navbar responsive -->
 
-                        <div class="nav__close" id="nav-close">
-                            <i class="bx bx-x"></i>
-                        </div>
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
             </div>
             <!-- navButton dark mode dan chart -->
             <div class="nav__btns">
@@ -420,7 +428,32 @@
                 </div>
 
                 <div class="testimonial__images">
-                    <div class="testimonial__square"></div>
+                    <div class="testimonial__square">
+                        <div class="testimonial_comment_container">
+                            <div class="testimonial_comment_head">
+                                <img src="assets/img/profile-icon.png" alt="">
+                                <div class="rating-container">
+                                    <h3>Add a comment</h3>
+                                    <div class="rating">
+                                        <i class='bx bxs-star star' onclick=""></i>
+                                        <i class='bx bxs-star star'></i>
+                                        <i class='bx bxs-star star'></i>
+                                        <i class='bx bxs-star star'></i>
+                                        <i class='bx bxs-star star'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <form action="" method="post">
+                                    <textarea name="comment" id="comment" cols="30" placeholder="Comment"></textarea>
+                                    <div class="button-container">
+                                        <button type="submit" name="submit" class="kirim">Kirim</button>
+                                        <button type="submit" name="cancel" class="cancel">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <img src="assets/img/testimonial.png" alt="" class="testimonial__img">
                 </div>
             </div>
@@ -583,6 +616,8 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/star.js"></script>
 </body>
 
 </html>

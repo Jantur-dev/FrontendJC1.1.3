@@ -805,8 +805,14 @@ img .nav__logo {
   align-items: center;
 }
 
+.image__of__currentProduct__container {
+  display: flex;
+  gap: 5px;
+}
+
 .image__of__currentProduct {
   display: flex;
+  background-color: black;
   /* height: 3.125rem; */
   /* padding: 0.0625rem; */
   align-items: flex-start;
@@ -858,7 +864,7 @@ img .nav__logo {
 
 .footer__save__container {
   display: flex;
-  width: 62.875rem;
+  width: 59.875rem;
   height: 2.5rem;
   justify-content: flex-end;
   align-items: center;

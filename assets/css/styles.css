@@ -16,6 +16,7 @@
   --body-color: #eeeeee;
   --container-color: #f5faf4;
   --border-color: hsl(0, 0%, 94%);
+  --star-color: hsl(0, 0%, 100%);
 
   /*========== Font and typography ==========*/
   --body-font: "Roboto", sans-serif;
@@ -128,6 +129,8 @@ body.dark-theme {
   --border-color: hsl(0, 0%, 20%);
   --nav-hover-color: hsl(31, 76%, 74%);
   --logo: url(assets/img/logo.png) no-repeat;
+  --star-color: hsl(180, 2%, 12%);
+
 }
 
 /*========== Button Dark/Light ==========*/
@@ -706,6 +709,85 @@ svg {
   margin-right: initial;
 }
 
+.testimonial_comment_head {
+  display: flex;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.testimonial_comment_head .rating-container {
+  margin-top: 15px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial_comment_head .rating {
+  margin-top: 10px;
+}
+
+.testimonial_comment_head h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.testimonial_comment_head img {
+  width: 100px;
+}
+
+.testimonial_comment_head i {
+  font-size: 20px; 
+  color: var(--star-color);
+}
+
+.testimonial_comment_head i.active {
+   color: gold;
+}
+
+.testimonial_comment_container .comment textarea {
+  position: relative;
+  top: 70px;
+  left: 100px;
+  background: transparent;
+  border-radius: 15px;
+  border: 1px solid black;
+  font-size: 17px;
+  padding-left: 10px;
+  padding-top: 10px;
+  height: 100px;
+}
+.testimonial_comment_container .comment textarea::placeholder {
+  color: black;
+  font-size: 15px;
+}
+.testimonial_comment_container .comment textarea:focus {
+    border: 1px solid black;
+}
+
+.testimonial_comment_container .comment .kirim {
+  position: relative;
+  top: 110px;
+  left: 20px;
+  background-color: rgb(125, 255, 125);
+  padding: 10px;
+  border-radius: 5px;
+}
+.testimonial_comment_container .comment .cancel {
+  position: relative;
+  top: 110px;
+  right: 250px;
+  background-color: rgb(253, 67, 67);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.testimonial_comment_container .button-container {
+  position: relative;
+  left: 325px;
+  bottom: 15px;
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   content: "";
@@ -1078,6 +1160,64 @@ svg {
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
   }
+
+  .testimonial__square {
+    width: 100vw;
+    position: relative;
+    right: 16px;
+    height: 250px;
+  }
+
+  .testimonial_comment_container {
+    visibility: hidden;
+  }
+
+  /* .testimonial_comment_container {
+    position: relative;
+    bottom: 55px;
+  }
+
+  .testimonial_comment_head img {
+    width: 50px;
+    height: 50px;
+    margin-top: 13px;
+    position: relative;
+    left: 10px;
+  }
+
+  .testimonial_comment_head .rating-container h3,
+  .testimonial_comment_head .rating-container .star {
+    font-size: 18px;
+  }
+
+  .testimonial_comment_container .comment {
+    position: relative;
+    right: 100px;
+  }
+
+  .testimonial_comment_container .comment textarea{
+    width: 300px;
+    margin-left: 5px;
+  }
+
+  .testimonial_comment_container .comment .kirim {
+    left: 340px;
+  }
+
+  .testimonial_comment_container .comment .cancel {
+    left: 55px;
+  }
+
+  .testimonial_comment_container .comment .button-container {
+    position: absolute;
+    bottom: -5px;
+  } */
+}
+
+@media screen and (min-width: 320px) {
+  .testimonial_comment_container {
+    visibility: hidden;
+  }
 }
 
 /* For medium devices */
@@ -1114,6 +1254,10 @@ svg {
 
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial_comment_container {
+    visibility: hidden;
   }
 }
 
@@ -1234,6 +1378,10 @@ svg {
   .footer__title {
     font-size: var(--h3-font-size);
   }
+
+  .testimonial_comment_container {
+    visibility: hidden;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1292,6 +1440,10 @@ svg {
   .testimonial__container {
     padding-bottom: 4rem;
   }
+
+  .testimonial_comment_container {
+    visibility: hidden;
+  }
 }
 
 /* For large devices */
@@ -1322,5 +1474,9 @@ svg {
 
   .scrollup {
     right: 3rem;
+  }
+
+  .testimonial_comment_container {
+    visibility: visible;
   }
 }
